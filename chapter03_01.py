@@ -40,7 +40,6 @@ print()
 
 # Generator 반복은 하는데 값을 생성하는
 
-
 # Generator : 한 번에 한 개의 항목을 생성(메모리 유지x) 성능이 아주 좋음
 tuple_g = (ord(s) for s in chars)
 
@@ -51,7 +50,6 @@ tuple_g = (ord(s) for s in chars)
 
 # Array
 array_g = array.array('I', (ord(s) for s in chars))  # 첫번째 인자로 자료형 타입
-
 
 print('Ex2-1 - ', tuple_g)
 
@@ -156,4 +154,4 @@ print('Ex7-7 - ', f_list.sort(), f_list)
 print('Ex7-8 - ', f_list.sort(reverse=True), f_list)
 print('Ex7-9 - ', f_list.sort(key=len), f_list)
 print('Ex7-10 - ', f_list.sort(key=lambda x: x[-1]), f_list)
-print('Ex7-11 - ', f_list.sort(key=lambda x: x[-1],reverse=True), f_list)
+print('Ex7-11 - ', f_list.sort(key=lambda x: x[-1], reverse=True), f_list)
