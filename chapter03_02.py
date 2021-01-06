@@ -39,7 +39,7 @@ with open('./resources/test1.csv', 'r', encoding='utf-8') as f:
     next(temp)
 
     # 변환
-    NA_CODES = [tuple(x) for x in temp]
+    NA_CODES = [tuple(x) for x in temp] 
 
 print('Ex2-1 - ',)
 print(NA_CODES)
