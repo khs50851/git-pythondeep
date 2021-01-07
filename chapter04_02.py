@@ -190,17 +190,17 @@ print()
 print()
 
 
-def perf_clock(func):
+def perf_clock(func1):
     def perf_clocked(*args):
         # 시작 시간
         st = time.perf_counter()
-        result = func(*args)
+        result = func1(*args)
         # 종료시간
         et = time.perf_counter() - st
         # 함수 명
-        name = func.__name__
+        name = func1.__name__
         # 매개 변수
-        arg_str = ','.join(repr(arg) for arg in args)
+        arg_str = ','.join(str(arg) for arg in args)
         # 출력
         print('Result : [%0.5fs] %s(%s) -> %r' %
               (et, name, arg_str, result))  # 걸린시간 함수이름 매개변수 결과값

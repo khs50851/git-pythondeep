@@ -13,7 +13,7 @@ from dis import dis
 from types import MappingProxyType
 import csv
 print('Ex1-1 - ')
-# print(__builtins__.__dict__)
+print(__builtins__.__dict__)
 
 print()
 print()
