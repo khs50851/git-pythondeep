@@ -239,9 +239,16 @@ def gen3_sub():
     x = yield 100
     print('Recv : ',str(x))
 
+def gen4_sub():
+    print('Sub coroutine2')
+    x = yield 20
+    print('Recv : ',str(x))
+    x = yield 200
+    print('Recv : ',str(x))
 
 def gen4_main(): # 위임을 함
     yield from gen3_sub() # 서브루틴에 대해 코루틴을 관리하는 메소드를 만들고
+    yield from gen4_sub()
     # 여기 여러개 만들고 관리 할 수 있음
 
 t5 = gen4_main()
@@ -249,3 +256,4 @@ t5 = gen4_main()
 print('Ex7-1 - ',next(t5))
 print('Ex7-2 - ',t5.send(7))
 print('Ex7-3 - ',t5.send(77))
+print('Ex7-4 - ',t5.send(72))
