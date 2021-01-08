@@ -236,5 +236,5 @@ cm = CraneMachine(range(1, 100))  # 추상 메소드 구현 안하면 에러
 print('Ex5-4 - ', cm._items)
 print('Ex5-5 - ', cm.pick())
 print('Ex5-6 - ', cm())
-print('Ex5-7 - ', cm.inspect()) # 자식에 없는 메소드인데 없으면 알아서 부모에서 끌어옴
+print('Ex5-7 - ', cm.inspect())  # 자식에 없는 메소드인데 없으면 알아서 부모에서 끌어옴
 print('Ex5-7 - ', cm.inspect())
